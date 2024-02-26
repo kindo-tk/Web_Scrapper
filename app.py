@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from urllib.request import urlopen as uReq
 import logging
-from pymongo import MongoClient 
+#from pymongo import MongoClient 
 
 logging.basicConfig(filename="scrapper.log", level=logging.INFO)
 
@@ -60,12 +60,12 @@ def index():
                           "Comment": custComment}
                 reviews.append(mydict)
                 
-            # integrating MongoDB database(local host)
-            client = MongoClient() 
-            client = MongoClient("mongodb://localhost:27017/") 
-            db = client['review_scrap']
-            review_collection = db['review_scrap_data']
-            review_collection.insert_many(reviews)
+            # # integrating MongoDB database(local host)
+            # client = MongoClient() 
+            # client = MongoClient("mongodb://localhost:27017/") 
+            # db = client['review_scrap']
+            # review_collection = db['review_scrap_data']
+            # review_collection.insert_many(reviews)
 
             return render_template('result.html', reviews=reviews[0:(len(reviews) - 1)])
         except Exception as e:
