@@ -39,7 +39,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-2. Open your web browser and go to `http://localhost:5000`.
+2. Open your web browser and go to http://localhost:5000.
 
 3. Enter your search query in the provided input field and click the "Search" button.
 
