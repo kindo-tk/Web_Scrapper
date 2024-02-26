@@ -1,4 +1,5 @@
-flask
+Flask
+gunicorn
 flask_cors
 requests
 bs4
